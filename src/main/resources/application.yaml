@@ -1,0 +1,34 @@
+server:
+  port: 8085
+  servlet:
+    context-path: /classkeeper
+spring: 
+  application:
+    name: classkeeper
+  datasource: 
+    url: jdbc:oracle:thin:@atpattendance_medium?TNS_ADMIN=E:/wallets/atp_developer1
+    username: atp_developer1
+    password: Miproyecto2023
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database: oracle
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 20MB
+      max-request-size: 20MB
+  jackson:
+    serialization:
+      indent-output: false
+
+oracle:
+  jdbc:
+    fanEnabled: false
+
+logging:
+  pattern:
+    dateformat: HH:mm
